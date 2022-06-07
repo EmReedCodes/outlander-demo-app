@@ -16,13 +16,25 @@ span{
     text-align: center;
 }
 
-ul{
-    list-style-type: none;
+.suggestions{
     text-align: center;
 }
+
+ul{
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+    list-style-position: inside;
+}
 li{
-    text-align: center;
+    /* text-align: center; */
     font-size: 12px;
+    padding: .5px 0;
+}
+
+ul li:first-child{
+    margin-bottom: 4px;
+    font-size: 13px;
 }
 
 .bck-img{
@@ -51,7 +63,7 @@ background-color: #F3ECE7;
 border-radius: 0;
 -webkit-appearance: none;
 border: 1px solid transparent;
-padding: 6px;
+padding: 4px;
 }
 
 button{

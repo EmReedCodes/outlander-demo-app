@@ -18,14 +18,14 @@ async function apiRequest(){
         document.querySelector('.birthday').innerText = `Birthday: ${data.birthDate}`
         document.querySelector('.occupation').innerText = `${data.name}'s occupations have been ${nameOccupation}.`
 
-
-        for(let i = 0; i < outlanderFeat.length; i++){ //for each trait
+        //todo outlander features 
+        // for(let i = 0; i < outlanderFeat.length; i++){ //for each trait
             
-            const li = document.createElement('li') //create li
-            li.classList.add('clear')
-            li.innerText = outlanderFeat(i) //display the trait here
-            document.querySelector('ul').appendChild(li)//append the li to ul
-        }
+        //     const li = document.createElement('li') //create li
+        //     li.classList.add('clear')
+        //     li.innerText = outlanderFeat(i) //display the trait here
+        //     document.querySelector('ul').appendChild(li)//append the li to ul
+        // }
     
 
     } catch(error) {

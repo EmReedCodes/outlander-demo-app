@@ -1,5 +1,5 @@
 document.querySelector('button').addEventListener('click', apiRequest)
-
+//TODO add data from outlander api to mongoDB so this works again :(
 async function apiRequest(){
     const outlanderName = document.querySelector('input').value
     try {
@@ -7,9 +7,9 @@ async function apiRequest(){
         const data = await response.json()
         console.log(data)
         let nameOccupation = data.occupation.join(', ')
-        // let featuresInfo = data.features
-        // let outlanderFeat = Object.values(featuresInfo)
-        // const outlanderData = new outlanderInfo(data.name, data.birthDate, data.birthPlace, data.features, data.occupation, data.quote, data.image)
+        let featuresInfo = data.features
+        let outlanderFeat = Object.values(featuresInfo)
+        const outlanderData = new outlanderInfo(data.name, data.birthDate, data.birthPlace, data.features, data.occupation, data.quote, data.image)
 
         document.querySelector('img').src = data.image
         document.querySelector('.quote').innerText = `"${data.quote}"`
